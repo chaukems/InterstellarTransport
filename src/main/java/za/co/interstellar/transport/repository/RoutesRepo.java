@@ -6,22 +6,17 @@
 package za.co.interstellar.transport.repository;
 
 import java.util.List;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.co.interstellar.transport.entity.Route;
 
 /**
  *
  * @author VukosiNyeleti
  */
-@Transactional
-public interface RoutesRepo {
+@Repository("routesRepo")
+public interface RoutesRepo extends JpaRepository<Route, Long>{
 
-    Route findById(long id);
-
-    List<Route> findAll();
-
-    void save(Route route);
-
-    public List<Route> findByPlanetNode(String node);
+    public List<Route> findByPlanetOrigin(String planetOrigin);
 
 }

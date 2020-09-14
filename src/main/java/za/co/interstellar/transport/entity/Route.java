@@ -6,20 +6,18 @@
 package za.co.interstellar.transport.entity;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import za.co.interstellar.transport.util.Vertex;
 
 /**
  *
  * @author VukosiNyeleti
  */
 @Entity
-@Table(name = "Routes")
+@Table
 public class Route implements Serializable {
 
     @Id

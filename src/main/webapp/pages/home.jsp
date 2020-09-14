@@ -38,7 +38,7 @@
                     <input  ng-model="$ctrl.searchForm.destination" type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Destination">
 
                     <!-- Sign in button -->
-                    <button type="button" ng-click="$ctrl.getShortestPath($ctrl.searchForm)" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                    <button type="button" ng-click="$ctrl.getShortestPath($ctrl.searchForm)" class="btn btn-info btn-block my-4" type="submit">Find Path</button>
                 </form>
                 <div>Entry {{$ctrl.searchForm| json}}</div>
                 <br><br>

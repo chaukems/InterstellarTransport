@@ -7,14 +7,15 @@ package za.co.interstellar.transport;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  *
  * @author VukosiNyeleti
  */
-@SpringBootApplication(exclude=HibernateJpaAutoConfiguration.class)
+@EnableJpaRepositories
+@SpringBootApplication
 @ComponentScan
 public class InterTransportApplication {
 

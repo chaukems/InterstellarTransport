@@ -13,12 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author VukosiNyeleti
- */
+
 @Entity
-@Table(name = "Traffic")
+@Table
 public class Traffic implements Serializable {
 
     @Id

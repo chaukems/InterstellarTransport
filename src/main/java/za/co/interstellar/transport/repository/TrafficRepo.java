@@ -5,21 +5,15 @@
  */
 package za.co.interstellar.transport.repository;
 
-import java.util.List;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.co.interstellar.transport.entity.Traffic;
 
 /**
  *
  * @author VukosiNyeleti
  */
-@Transactional
-public interface TrafficRepo {
-
-    Traffic findById(long id);
-
-    List<Traffic> findAll();
-
-    void save(Traffic traffic);
+@Repository
+public interface TrafficRepo extends JpaRepository<Traffic, Long>{
 
 }

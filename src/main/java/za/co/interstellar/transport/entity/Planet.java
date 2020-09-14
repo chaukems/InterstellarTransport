@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * @author VukosiNyeleti
  */
 @Entity
-@Table(name = "PlanetNames")
+@Table
 public class Planet implements Serializable {
 
     @Id

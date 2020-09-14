@@ -5,7 +5,6 @@
  */
 package za.co.interstellar.transport;
 
-import com.google.gson.Gson;
 import javax.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import za.co.interstellar.transport.repository.TrafficRepo;
@@ -18,11 +17,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
-import java.util.PriorityQueue;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -31,9 +26,7 @@ import za.co.interstellar.transport.entity.Route;
 import za.co.interstellar.transport.entity.Traffic;
 import za.co.interstellar.transport.repository.PlanetsRepo;
 import za.co.interstellar.transport.repository.RoutesRepo;
-import za.co.interstellar.transport.util.Edge;
 import za.co.interstellar.transport.util.POICellValuesUtil;
-import za.co.interstellar.transport.util.Vertex;
 
 /**
  *
@@ -115,40 +108,6 @@ public class DataLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void computePaths(Vertex source) {
-        source.minDistance = 0.;
-        PriorityQueue<Vertex> vertexQueue = new PriorityQueue<Vertex>();
-        vertexQueue.add(source);
-
-        while (!vertexQueue.isEmpty()) {
-            Vertex u = vertexQueue.poll();
-
-            // Visit each edge exiting u
-            for (Edge e : u.adjacencies) {
-                Vertex v = e.target;
-                double weight = e.weight;
-                double distanceThroughU = u.minDistance + weight;
-                if (distanceThroughU < v.minDistance) {
-                    vertexQueue.remove(v);
-
-                    v.minDistance = distanceThroughU;
-                    v.previous = u;
-                    vertexQueue.add(v);
-                }
-            }
-        }
-    }
-
-    public static List<Vertex> getShortestPathTo(Vertex target) {
-        List<Vertex> path = new ArrayList<Vertex>();
-        for (Vertex vertex = target; vertex != null; vertex = vertex.previous) {
-            path.add(vertex);
-        }
-
-        Collections.reverse(path);
-        return path;
     }
 
 }

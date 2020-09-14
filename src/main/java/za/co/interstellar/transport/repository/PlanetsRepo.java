@@ -5,23 +5,11 @@
  */
 package za.co.interstellar.transport.repository;
 
-import java.util.List;
-import org.springframework.transaction.annotation.Transactional;
 import za.co.interstellar.transport.entity.Planet;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author VukosiNyeleti
- */
-@Transactional
-public interface PlanetsRepo {
-
-    Planet findById(long id);
-
-    Planet findByNode(String node);
-
-    List<Planet> findAll();
-
-    void save(Planet planet);
-
+@Repository
+public interface PlanetsRepo extends JpaRepository<Planet, Long> {
+    Planet findByPlanetNode(String node);
 }
