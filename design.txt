@@ -1,0 +1,21 @@
+Design Considerations
+------------------------
+I have followed below OOP and SOLID design principles:
+1. DRY (Don't repeat yourself)
+2. Encapsulate What Changes
+3. Open Closed Design Principle - Classes, methods, or functions should be Open for extension (new functionality) and Closed for modification
+4. Single Responsibility Principle (SRP)
+5. Interface Segregation Principle (ISP)
+6. Delegation principles
+7. Design patterns
+
+And I have considered the following
+1.	Reusability
+2.	Robustness
+3.	Performance
+4.	Readability
+5.	Separation of concerns
+
+Rest/WSDL Documentation
+---------------------------
+I have opted to include swagger documentation to document and give usage of the service.

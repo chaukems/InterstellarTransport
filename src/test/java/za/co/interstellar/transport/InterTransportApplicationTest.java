@@ -137,6 +137,5 @@ public class InterTransportApplicationTest {
 
         assertEquals(path, null);
     }
-
    
 }
