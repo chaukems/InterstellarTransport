@@ -17,7 +17,6 @@ interstellarApp.controller('interstellarController',
                 }).then(function successCallback(response) {
 
                     $ctrl.results = response.data;
-                    console.log($ctrl.results);
                 }, function errorCallback(error) {
                     console.log(error);
                 });

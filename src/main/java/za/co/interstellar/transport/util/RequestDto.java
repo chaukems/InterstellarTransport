@@ -7,10 +7,7 @@ package za.co.interstellar.transport.util;
 
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author VukosiNyeleti
- */
+
 public class RequestDto {
 
     @NotNull

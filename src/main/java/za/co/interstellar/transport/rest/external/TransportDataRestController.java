@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package za.co.interstellar.transport.rest;
+package za.co.interstellar.transport.rest.external;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +30,8 @@ public class TransportDataRestController {
     private TransportDataService transportDataService;
 
     @PostMapping(path = "/getDistance", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation(value = "", authorizations = {
+        @Authorization(value = "jwtToken")})
     public Object getDistanceAndShortestPath(@RequestBody RequestDto requestDto) {
 
         return transportDataService.getDistanceAndPath(requestDto);

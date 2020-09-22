@@ -84,8 +84,8 @@ public class DataLoader {
 
                         } else if (i == 1) {
                             Route route = new Route();
-                            route.setPlanetOrigin(POICellValuesUtil.getCellValueAsString(currentRow.getCell(1)));
-                            route.setPlanetDestination(POICellValuesUtil.getCellValueAsString(currentRow.getCell(2)));
+                            route.setPlanetOrigin(planetRepo.findByPlanetNode(POICellValuesUtil.getCellValueAsString(currentRow.getCell(1))));
+                            route.setPlanetDestination(planetRepo.findByPlanetNode(POICellValuesUtil.getCellValueAsString(currentRow.getCell(2))));
                             String val = currentRow.getCell(3).getNumericCellValue() + "";
                             route.setDistance(Double.valueOf(val));
                             routesRepo.save(route);
