@@ -16,6 +16,31 @@ And I have considered the following
 4.	Readability
 5.	Separation of concerns
 
+I have design the app using the Microservice architecture, secured it with jwt and spring security
+
 Rest/WSDL Documentation
 ---------------------------
-I have opted to include swagger documentation to document and give usage of the service.
+I have opted to include swagger documentation to document the service usage.
+
+Some of the design considerations
+------------------------------------
+Eureka Discovery: for service registration
+Feign: a declarative web service client
+Zuul: provides intelligent routing
+Rest Repositories: to expose JPA repositories as REST endpoints
+Web: Spring MVC and embedded Tomcat
+Hystrix: a circuit breaker to stop cascading failure and enable resilience
+Lombok: to reduce boilerplate code
+
+Web technologies
+-------------------
+Angular Js
+Bootstrap css
+Spring mvc
+
+
+Assumptions
+-------------------------
+If I had more time I would have included / completed the following
+- Api gateway
+- Would have used npm, nodejs, angular 9 for web app

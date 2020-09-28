@@ -1,0 +1,49 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Shortest path between A and Z",
+        "description": "",
+        "id": "find-shortest-path;shortest-path-between-a-and-z",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "that A is the source planet and Z is the destination planet",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Path is not null",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Shortest path is calculated and displayed",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Find shortest path",
+    "description": "",
+    "id": "find-shortest-path",
+    "keyword": "Feature",
+    "uri": "interstellar.feature"
+  }
+]

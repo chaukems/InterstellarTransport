@@ -1,1 +1,6 @@
 /target/
+/discovery-service/target/
+/shortest-path-service/target/
+/api-gateway/target/
+/web-app/target/
+/eureka-service/target/
